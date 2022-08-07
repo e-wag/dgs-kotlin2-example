@@ -1,0 +1,27 @@
+type User {
+    uuid: ID!
+    name: String!
+    firstName: String!
+}
+
+type ExampleType {
+    isCool: Boolean!
+    isNice: Boolean
+    user: User!
+}
+
+type Query {
+    exampleType: ExampleType
+}
+
+type Mutation {
+    createExampleType: ExampleType
+}
+
+interface Test {
+    build: String!
+}
+
+type TestWow implements Test {
+    build: String!
+}
